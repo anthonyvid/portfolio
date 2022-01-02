@@ -1,14 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
-$font: "Lora", serif;
+@import "../styles/helper.scss";
 
 .master-content {
 	width: 100%;
-	height: 600px;
-	// background-color: #5299d3;
+	height: 80vh;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 0 50px 0 50px;
+}
+
+.hero {
+	height: 90%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.action {
+	height: auto;
+	width: 100%;
 }
 
 .content {
@@ -19,19 +30,29 @@ $font: "Lora", serif;
 	justify-content: right;
 
 	.wrapper {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
 		h1 {
 			font-size: 64px;
-			font-family: $font;
+			font-family: $primary-font;
 			font-weight: 500;
 		}
 		h3 {
 			font-size: 24px;
-			font-family: $font;
+			font-family: $primary-font;
 			font-weight: 400;
 		}
 		strong {
 			font-weight: 700;
-			font-family: $font;
+			font-family: $primary-font;
+		}
+
+		.scroll-wrap {
+			// border: 1px solid black;
+			// flex-grow: 1;
 		}
 	}
 }
@@ -39,4 +60,46 @@ $font: "Lora", serif;
 .person {
 	width: 45%;
 	height: 100%;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+@media only screen and (max-height: 525px) {
+	.master-content {
+		height: 25%;
+	}
+}
+
+@media only screen and (max-width: 840px) {
+	.master-content {
+		// justify-content: start;
+		padding-top: 30px;
+		height: 600px;
+	}
+
+	.hero {
+		flex-direction: column-reverse;
+		text-align: center;
+
+		.content {
+			width: 100%;
+			height: 25%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			h3 {
+				visibility: hidden;
+			}
+		}
+	}
+
+	.person {
+		width: 100%;
+		height: 75%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
