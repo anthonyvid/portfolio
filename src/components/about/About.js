@@ -1,10 +1,9 @@
 import "./about.css";
 import Scroll from "../scroll-down/Scroll";
 import Person from "../person/Person";
+import Typical from "react-typical";
 
 function About() {
-	
-
 	return (
 		<section className="master-content">
 			<div className="hero">

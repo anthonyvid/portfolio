@@ -9,7 +9,7 @@ function Navbar() {
 			</div>
 			<ul>
 				<li>
-					<a href="">About</a>
+					<a href="#">About</a>
 				</li>
 				<li>
 					<a
@@ -20,7 +20,7 @@ function Navbar() {
 					</a>
 				</li>
 				<li>
-					<a href="">Contact</a>
+					<a href="#">Contact</a>
 				</li>
 				<button id="view-work" href="">
 					View Work

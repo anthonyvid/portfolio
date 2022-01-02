@@ -112,6 +112,7 @@
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     text-align: center;
+    gap: 25px;
   }
   .hero .content {
     width: 100%;

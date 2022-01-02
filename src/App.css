@@ -34,8 +34,8 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: lightcoral;
-	border-radius: 5px;
+	background: lightblue;
+	border-radius: 6px;
 }
 
 /* Handle on hover */
@@ -43,7 +43,7 @@ a {
 	background: #555;
 }
 
-.scroll-circle {
+/* .scroll-circle {
 	background-color: red;
 	width: 25px;
 	height: 25px;
@@ -51,4 +51,12 @@ a {
 	z-index: 999;
 	position: absolute;
 	left: 97.5%;
+    
+} */
+
+@media only screen and (max-width: 725px) {
+	::-webkit-scrollbar {
+		visibility: none;
+		display: none;
+	}
 }
