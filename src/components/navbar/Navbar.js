@@ -1,38 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 
 function Navbar({ scrollPos }) {
-	// console.log(scrollPos);
+	useEffect(() => {
+		AOS.init();
+	}, []);
+	console.log(scrollPos);
 	const [navEffect, setNavEffect] = useState(false);
 
-	const navOnEffect = () => {
-		console.log("onnn");
-		const item1 = document.getElementById("about");
-		const item2 = document.getElementById("media");
-		const item3 = document.getElementById("contact");
-		item1.style.display = "none";
-		item2.style.display = "none";
-		item3.style.display = "none";
+	const handleNavEffect = async () => {
+		const items = document.getElementById("nav-items").childNodes;
+
+		if (!items[0].hasAttribute("data-aos")) {
+			items[0].setAttribute("data-aos", "fade");
+			await timer(50);
+			items[1].setAttribute("data-aos", "fade");
+			await timer(50);
+			items[2].setAttribute("data-aos", "fade");
+		} else {
+			items[2].removeAttribute("data-aos");
+			await timer(50);
+			items[1].removeAttribute("data-aos");
+			await timer(50);
+			items[0].removeAttribute("data-aos");
+		}
 	};
 
-	const navOffEffect = () => {
-		console.log("offf");
-		const item1 = document.getElementById("about");
-		const item2 = document.getElementById("media");
-		const item3 = document.getElementById("contact");
-		item1.style.display = "flex";
-		item2.style.display = "flex";
-		item3.style.display = "flex";
-	};
-
-	if (scrollPos > 300) {
+	if (scrollPos > 15) {
 		if (!navEffect) {
-			navOnEffect();
+			handleNavEffect();
 			setNavEffect(true);
 		}
 	} else {
 		if (navEffect) {
-			navOffEffect();
+			handleNavEffect();
 			setNavEffect(false);
 		}
 	}
@@ -40,9 +45,15 @@ function Navbar({ scrollPos }) {
 	return (
 		<nav className="navbar">
 			<div className="logo">
-				<img src="/logo.png" alt="logo" />
+				<img
+					src="/logo.png"
+					alt="logo"
+					data-aos="zoom-in"
+					data-aos-easing="ease-out-cubic"
+					data-aos-duration="2000"
+				/>
 			</div>
-			<ul>
+			<ul id="nav-items">
 				<li id="about">
 					<a href="#">About</a>
 				</li>

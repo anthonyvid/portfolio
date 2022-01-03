@@ -12,6 +12,7 @@
 	padding: 0 50px 0 50px;
 	position: sticky;
 	top: 0;
+	z-index: 99;
 }
 
 .logo {
@@ -35,7 +36,11 @@ ul {
 	li {
 		font-size: 17px;
 		font-weight: bold;
-		transition: 1s ease-in-out;
+		// transition: 0.3s ease-in-out;
+	}
+
+	.hide-item {
+		visibility: hidden;
 	}
 
 	a:hover {

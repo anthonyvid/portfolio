@@ -97,7 +97,7 @@
 
 @media only screen and (max-height: 525px) {
   .master-content {
-    height: 25%;
+    height: auto;
   }
 }
 
@@ -142,6 +142,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    z-index: 0;
   }
 }
 /*# sourceMappingURL=about.css.map */

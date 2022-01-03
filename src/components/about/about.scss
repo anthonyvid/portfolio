@@ -67,7 +67,7 @@
 
 @media only screen and (max-height: 525px) {
 	.master-content {
-		height: 25%;
+		height: auto;
 	}
 }
 
@@ -80,7 +80,7 @@
 	.hero {
 		flex-direction: column-reverse;
 		text-align: center;
-        gap: 25px;
+		gap: 25px;
 
 		.content {
 			width: 100%;
@@ -101,5 +101,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		z-index: 0;
 	}
 }
