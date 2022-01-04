@@ -2,7 +2,7 @@ import "./about.css";
 import Scroll from "../scroll-down/Scroll";
 import Person from "../person/Person";
 
-function About() {
+function About({ scrollPos }) {
 	return (
 		<section className="master-content">
 			<div className="hero">
@@ -12,7 +12,7 @@ function About() {
 				</div>
 			</div>
 			<div className="action">
-				<Scroll />
+				<Scroll scrollPos={scrollPos} />
 			</div>
 		</section>
 	);

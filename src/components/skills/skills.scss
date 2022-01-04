@@ -1,6 +1,28 @@
 .skills-section {
 	width: 100%;
-	height: 700px;
-	background-color: lightblue;
-	margin-top: 60px;
+	height: 500px;
+	border: 1px solid black;
 }
+
+.skills {
+	width: 100%;
+	height: 90%;
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+}
+
+// .skill {
+// 	transform: rotateX(random() deg) rotateZ(random() deg);
+// 	transform-style: preserve-3d;
+// 	border-radius: 32px;
+// 	box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+// 		28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+// 	transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+
+// 	&:hover {
+// 		transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
+// 		box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+// 			54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+// 	}
+// }

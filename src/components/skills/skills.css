@@ -1,7 +1,18 @@
 .skills-section {
   width: 100%;
-  height: 700px;
-  background-color: lightblue;
-  margin-top: 60px;
+  height: 500px;
+  border: 1px solid black;
+}
+
+.skills {
+  width: 100%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
 }
 /*# sourceMappingURL=skills.css.map */

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,sEAAI;AACZ,OAAO,CAAC,sFAAI;ADAZ,AAAA,iBAAiB,CAAC;EACjB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,eAAe;CACvB;;AAED,AAAA,cAAc,CAAC;EACd,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,GAAG;CACX",
+    "sources": [
+        "projects.scss",
+        "../styles/helper.scss"
+    ],
+    "names": [],
+    "file": "projects.css"
+}
