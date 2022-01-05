@@ -9,7 +9,7 @@ function Navbar({ scrollPos }) {
 	useEffect(() => {
 		AOS.init();
 	}, []);
-	console.log(scrollPos);
+	
 	const [navEffect, setNavEffect] = useState(false);
 
 	const handleNavEffect = async () => {

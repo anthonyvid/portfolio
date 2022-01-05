@@ -1,5 +1,6 @@
 import "./about.css";
-import Scroll from "../scroll-down/Scroll";
+import { Scroll } from "../scroll-down/Scroll";
+import { ScrollMobile } from "../scroll-down/ScrollMobile";
 import Person from "../person/Person";
 
 function About({ scrollPos }) {
@@ -13,6 +14,7 @@ function About({ scrollPos }) {
 			</div>
 			<div className="action">
 				<Scroll scrollPos={scrollPos} />
+				<ScrollMobile scrollPos={scrollPos} />
 			</div>
 		</section>
 	);
@@ -27,8 +29,7 @@ const Content = () => {
 				</h1>
 				<br />
 				<h3>
-					I'm an <strong>independent developer</strong> from <br />
-					Ontario, Canada
+					I'm an <strong>independent developer</strong> from Canada.
 				</h3>
 			</div>
 		</div>

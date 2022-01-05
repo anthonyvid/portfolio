@@ -46,8 +46,12 @@
   padding-top: 30px;
 }
 
+.action #scroll_down_mobile {
+  visibility: hidden;
+}
+
 .content {
-  width: 55%;
+  width: 57%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -112,12 +116,17 @@
 }
 
 @media only screen and (max-width: 840px) {
+  #person {
+    height: 400px;
+  }
   .hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     text-align: center;
+    gap: 7%;
+    padding-top: 25px;
   }
   .hero .content {
     margin-top: -25px;
@@ -132,9 +141,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding-top: 70px;
+  }
+  .hero .content h1 {
+    font-size: 54px;
   }
   .hero .content h3 {
-    margin-top: -25px;
+    margin-top: -15px;
   }
   .person {
     width: 100%;
@@ -152,6 +165,37 @@
   }
   .action {
     margin-left: -230px;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .action {
+    padding-top: 70px;
+    visibility: hidden;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 1px solid red;
+  }
+  .action #scroll_down_mobile {
+    visibility: visible;
+  }
+  #person {
+    height: 350px;
+    width: 400px;
+  }
+  .hero {
+    padding-top: 0;
+    margin-top: -140px;
+  }
+  .hero .content h1 {
+    font-size: 45px;
+  }
+  .hero .content h3 {
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=about.css.map */
