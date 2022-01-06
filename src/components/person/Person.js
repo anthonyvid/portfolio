@@ -2,6 +2,7 @@ import { React, useState, useEffect } from "react";
 import { animated, useSprings } from "react-spring";
 
 const EYE_MOVEMENT_LIMIT = 40;
+const EYEBROW_MOVEMENT_LIMIT = 250;
 
 function LeftEye(props) {
 	return (
@@ -242,18 +243,22 @@ function Person() {
 			<RightEyeBrow
 				style={{
 					transform: `translateY(${
-						-(window.innerWidth / 2 - mousePosition.y) / 250
+						-(window.innerWidth / 2 - mousePosition.y) /
+						EYEBROW_MOVEMENT_LIMIT
 					}px) translateX(${
-						-(window.innerWidth / 2 - mousePosition.x) / 250
+						-(window.innerWidth / 2 - mousePosition.x) /
+						EYEBROW_MOVEMENT_LIMIT
 					}px)`,
 				}}
 			/>
 			<LeftEyeBrow
 				style={{
 					transform: `translateY(${
-						-(window.innerWidth / 2 - mousePosition.y) / 250
+						-(window.innerWidth / 2 - mousePosition.y) /
+						EYEBROW_MOVEMENT_LIMIT
 					}px) translateX(${
-						-(window.innerWidth / 2 - mousePosition.x) / 250
+						-(window.innerWidth / 2 - mousePosition.x) /
+						EYEBROW_MOVEMENT_LIMIT
 					}px)`,
 				}}
 			/>

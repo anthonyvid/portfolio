@@ -15,8 +15,6 @@
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	// gap: 2%;
-	// border: 1px solid black;
 }
 
 .action {
@@ -54,6 +52,7 @@
 			font-size: 24px;
 			font-family: $primary-font;
 			font-weight: 400;
+			margin-left: 6px;
 		}
 		strong {
 			font-weight: 700;
@@ -152,37 +151,3 @@
 		}
 	}
 }
-
-// @media only screen and (max-width: 450px) {
-// 	.hero {
-// 		flex-direction: column-reverse;
-// 		text-align: center;
-
-// 		.content {
-// 			padding-top: 115px;
-
-// 			h1 {
-// 				font-size: 36px;
-// 			}
-
-// 			h3 {
-// 				font-size: 20px;
-// 				visibility: hidden;
-// 			}
-// 		}
-// 	}
-
-// 	.person {
-// 		width: 100%;
-// 		height: 75%;
-// 		display: flex;
-// 		align-items: center;
-// 		justify-content: center;
-// 		z-index: 0;
-// 	}
-
-// 	.action {
-// 		// margin-left: -230px;
-// 		// visibility: hidden;
-// 	}
-// }

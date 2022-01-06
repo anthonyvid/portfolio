@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import Track from "./components/track/Track";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
 	const [scrollPos, setScrollPos] = useState(0.0);
@@ -22,17 +23,18 @@ function App() {
 
 	return (
 		<div className="page-container">
+			<AnimatedCursor
+				innerSize={8}
+				outerSize={8}
+				color="95, 115, 103"
+				outerAlpha={0.2}
+				innerScale={0.7}
+				outerScale={2}
+			/>
 			<Navbar scrollPos={scrollPos} />
 			<About scrollPos={scrollPos} />
-			<div className="master-content-wrap">
-				<div className="track-box">
-					<Track />
-				</div>
-				<div className="content-box">
-					<Skills />
-					<Projects />
-				</div>
-			</div>
+			<Skills />
+			<Projects />
 		</div>
 	);
 }

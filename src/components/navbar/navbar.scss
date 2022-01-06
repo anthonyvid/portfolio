@@ -67,8 +67,40 @@ ul {
 	}
 }
 
+.drop-down-icon {
+	visibility: hidden;
+	display: none;
+}
+
+.drop-down-menu {
+	visibility: visible;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	// z-index: 999;
+	position: sticky;
+	top: 0;
+	left: 0;
+
+	transition: 0.25s ease;
+	opacity: 100%;
+}
+
+.hidden {
+	visibility: hidden;
+	display: none;
+	opacity: 0;
+}
+
 @media only screen and (max-width: 725px) {
 	ul {
 		display: none;
+	}
+	.drop-down-icon {
+		visibility: visible;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }

@@ -2,11 +2,23 @@ import "./about.css";
 import { Scroll } from "../scroll-down/Scroll";
 import { ScrollMobile } from "../scroll-down/ScrollMobile";
 import Person from "../person/Person";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function About({ scrollPos }) {
+	useEffect(() => {
+		AOS.init();
+	}, []);
+
 	return (
 		<section className="master-content">
-			<div className="hero">
+			<div
+				className="hero"
+				data-aos="fade-down"
+				data-aos-easing="ease-in-back"
+				data-aos-delay="300"
+			>
 				<Content />
 				<div className="person">
 					<Person />
@@ -29,7 +41,7 @@ const Content = () => {
 				</h1>
 				<br />
 				<h3>
-					I'm an <strong>independent developer</strong> from Canada.
+					I'm a <strong>Software developer</strong> from Canada.
 				</h3>
 			</div>
 		</div>

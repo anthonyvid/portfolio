@@ -20,7 +20,7 @@ export const ScrollMobile = ({ scrollPos }) => {
 		AOS.init();
 	}, []);
 
-	if (scrollPos > 500) {
+	if (scrollPos > 300) {
 		if (!scrollIndicator) {
 			document
 				.getElementById("scroll_down_mobile")
