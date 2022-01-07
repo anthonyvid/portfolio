@@ -5,16 +5,11 @@ import { projects } from "../../data/data";
 function Projects() {
 	return (
 		<section className="projects-section">
-			<div className="projects">
-				{/* {projects.map((project) => {
-					const { id, title, description, tools } = project;
-					return (
-						<div className="project" key={id}>
-							{title}
-						</div>
-					);
-				})} */}
+			<div className="projects-header">
+				<h1>Projects</h1>
+				<small>Things that I've built.</small>
 			</div>
+			<div className="projects-content"></div>
 		</section>
 	);
 }

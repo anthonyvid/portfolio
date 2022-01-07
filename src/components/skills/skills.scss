@@ -1,29 +1,83 @@
+@import "../styles/helper.scss";
+
 .skills-section {
 	width: 100%;
-	height: 500px;
-	border: 1px solid black;
-	margin-top: 60px;
-}
-
-.skills {
-	width: 100%;
-	height: 90%;
+	height: auto;
+	margin-top: 150px;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	gap: 50px;
 }
 
-// .skill {
-// 	transform: rotateX(random() deg) rotateZ(random() deg);
-// 	transform-style: preserve-3d;
-// 	border-radius: 32px;
-// 	box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
-// 		28px 28px 28px 0 rgba(34, 33, 81, 0.25);
-// 	transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+.skills-header {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
-// 	&:hover {
-// 		transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
-// 		box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
-// 			54px 54px 28px -10px rgba(34, 33, 81, 0.15);
-// 	}
-// }
+	h1 {
+		font-size: 46px;
+		font-family: $primary-font;
+	}
+
+	small {
+		font-size: 16px;
+		color: grey;
+	}
+}
+.skills-content {
+	width: 100%;
+	height: 80%;
+	display: grid;
+	grid-template-columns: repeat(5, 150px);
+	gap: 50px 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes flip-card {
+	0% {
+		transform: rotateY(0deg);
+		opacity: 1;
+	}
+	100% {
+		transform: rotateY(180deg);
+		opacity: 0;
+	}
+}
+
+.skill {
+	padding: 15px;
+	width: 150px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-weight: 700;
+	font-size: 18px;
+	font-family: "Open Sans";
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+	transition: 1s ease-in-out;
+
+	.skill-logo {
+		width: 100%;
+		height: 75%;
+	}
+}
+
+@media only screen and (max-width: 1075px) {
+	.skills-content {
+		grid-template-columns: repeat(3, 150px);
+	}
+}
+
+@media only screen and (max-width: 675px) {
+	.skills-content {
+		grid-template-columns: repeat(2, 150px);
+	}
+}

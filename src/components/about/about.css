@@ -40,9 +40,9 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-top: 30px;
 }
 
@@ -183,6 +183,7 @@
   }
   .action #scroll_down_mobile {
     visibility: visible;
+    margin-left: 20px;
   }
   #person {
     height: 350px;

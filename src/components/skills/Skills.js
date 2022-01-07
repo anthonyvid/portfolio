@@ -1,24 +1,32 @@
 import React from "react";
 import "./skills.css";
-import { skills, colors } from "../../data/data";
+import { skills } from "../../data/data";
+import "aos/dist/aos.css";
 
 function Skills() {
 	return (
 		<section className="skills-section">
-			<div className="skills">
-				{/* {skills.map((skill) => {
-					const { id, name } = skill;
+			<div className="skills-header">
+				<h1>Skills</h1>
+				<small>Things that I work with.</small>
+			</div>
+			<div className="skills-content">
+				{skills.map((skill) => {
+					const { id, name, icon, color } = skill;
+					const Icon = icon;
+
 					return (
 						<div
 							className="skill"
 							key={id}
-							style={{ backgroundColor: `${colors[id - 1]}` }}
-							data-aos="fade-in"
+							style={{ backgroundColor: `#${color}` }}
+							data-aos="zoom-in"
 						>
+							<Icon className="skill-logo" />
 							{name}
 						</div>
 					);
-				})} */}
+				})}
 			</div>
 		</section>
 	);

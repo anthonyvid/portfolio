@@ -1,6 +1,6 @@
 import "./about.css";
-import { Scroll } from "../scroll-down/Scroll";
-import { ScrollMobile } from "../scroll-down/ScrollMobile";
+import { Scroll } from "../animations/Scroll";
+import { ScrollMobile } from "../animations/ScrollMobile";
 import Person from "../person/Person";
 import AOS from "aos";
 import "aos/dist/aos.css";

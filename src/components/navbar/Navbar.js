@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { GiHamburgerMenu } from "react-icons/gi";
-import {
-	disableBodyScroll,
-	enableBodyScroll,
-	clearAllBodyScrollLocks,
-} from "body-scroll-lock";
+import { GiHamburgerMenu, GiSkills } from "react-icons/gi";
+import { GoLinkExternal } from "react-icons/go";
+import { GrFormClose, GrProjects, GrContactInfo } from "react-icons/gr";
+import { IoMdOpen } from "react-icons/io";
+import { VscTools } from "react-icons/vsc";
+import { FiBox } from "react-icons/fi";
+import { AiOutlineCopyrightCircle } from "react-icons/ai";
+import Pdf from "../../documents/resume.pdf";
 
 let width =
 	window.innerWidth ||
@@ -80,18 +82,24 @@ function Navbar({ scrollPos }) {
 		}
 	}
 
-	const handleDropDown = (e) => {
+	const handleDropDown = async (e) => {
 		const dropDownMenu = document.querySelector(".drop-down-menu");
-		
+
 		dropDownMenu.classList.toggle("hidden");
 
 		dropDownMenu.classList.contains("hidden")
 			? (document.body.style.overflow = "auto")
 			: (document.body.style.overflow = "hidden");
 
-		dropDownMenu.classList.contains("hidden")
-			? enableBodyScroll(window)
-			: disableBodyScroll(window);
+		const mobileOptions = document.querySelector(".options").children;
+
+		for (const item of mobileOptions) {
+			await timer(100);
+			item.classList.toggle("hidden");
+		}
+
+		await timer(200);
+		document.querySelector(".credit").classList.toggle("hidden");
 	};
 
 	return (
@@ -107,21 +115,21 @@ function Navbar({ scrollPos }) {
 				</div>
 				<ul id="nav-items" data-aos="fade-left" duration="4000">
 					<li id="about">
-						<a href="#">About</a>
+						<a href="#">Skills</a>
 					</li>
 					<li id="media">
 						<a
 							target="blank"
 							href="https://www.linkedin.com/in/anthonyvidovic/"
 						>
-							LinkedIn
+							Projects
 						</a>
 					</li>
 					<li id="contact">
 						<a href="#">Contact</a>
 					</li>
-					<button id="view-work" href="">
-						View Work
+					<button id="resume" onClick={() => window.open(Pdf)}>
+						Resume <GoLinkExternal />
 					</button>
 				</ul>
 				<div
@@ -133,7 +141,44 @@ function Navbar({ scrollPos }) {
 					<GiHamburgerMenu size={25} />
 				</div>
 			</nav>
-			<div className="drop-down-menu hidden"></div>
+			<div className="drop-down-menu hidden">
+				<div className="top-bar">
+					<img src="/logo.png" alt="logo" />
+					<GrFormClose size={40} onClick={handleDropDown} />
+				</div>
+				<div className="options">
+					<div className="hidden">
+						<VscTools size={35} />
+						<a href="#">Skills</a>
+					</div>
+					<div className="hidden">
+						<FiBox size={35} />
+						<a href="#">Projects</a>
+					</div>
+					<div className="hidden">
+						<GrContactInfo size={35} />
+						<a href="#">Contact</a>
+					</div>
+					<div className="hidden">
+						<IoMdOpen size={35} />
+						<a
+							href={Pdf}
+							target="_blank"
+							without
+							rel="noopener noreferrer"
+						>
+							Resume
+						</a>
+					</div>
+				</div>
+				<div className="credit hidden">
+					<small>Designed & Built by Anthony Vidovic</small>
+					<div>
+						<AiOutlineCopyrightCircle />
+						<small>2022</small>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 }
