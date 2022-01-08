@@ -48,27 +48,23 @@ export const projects = [
 	},
 	{
 		id: 2,
-		title: "TicketScout",
+		title: "COVID-19 Data Analyzer",
 		description:
-			"A Node.js web application powered by express to track and manage tickets, payments, and customers. Made for computer and phone technicians.",
+			"Given COVID-19 data, the program will process, analyze, and plot, based on user input from a graphical user interface",
 		stack: [
-			["HTML", "A882DD"],
-			["SCSS", "F08080"],
-			["JavaScript", "93827F"],
-			["NodeJs", "B4D2E7"],
-			["Express", "7D8CC4"],
-			["MongoDB", "C3BEF7"],
+			["Python", "FFC145"],
+			["Tkinter", "F08080"],
+			["Matplot", "93827F"],
 		],
 		img: [
-			"./photos/ticketscout/1.jpeg",
-			"./photos/ticketscout/2.png",
-			"./photos/ticketscout/3.jpeg",
-			"./photos/ticketscout/4.png",
-			"./photos/ticketscout/5.jpeg",
+			"./photos/coviddatatracker/1.png",
+			"./photos/coviddatatracker/2.png",
+			"./photos/coviddatatracker/3.png",
+			"./photos/coviddatatracker/4.png",
 		],
 		links: [
-			"https://github.com/anthonyvid/TicketScout",
-			"https://ticketscout.herokuapp.com/",
+			"https://github.com/anthonyvid/CovidDataTracker",
+			"https://replit.com/@CIS2250/PROJECTL01-CIS2250-3#README.md",
 		],
 	},
 ];
