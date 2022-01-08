@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./skills.css";
 import { skills } from "../../data/data";
 import "aos/dist/aos.css";
 
 function Skills() {
+	const skillsSection = useRef(null);
+
 	return (
-		<section className="skills-section">
+		<section className="skills-section" ref={skillsSection}>
 			<div className="skills-header">
 				<h1>Skills</h1>
 				<small>Things that I work with.</small>

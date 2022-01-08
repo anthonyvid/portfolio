@@ -11,6 +11,7 @@
 
 .hidden {
 	display: none;
+	visibility: hidden;
 	opacity: 0%;
 }
 
@@ -50,7 +51,6 @@ ul {
 	li {
 		font-size: 17px;
 		font-weight: bold;
-		// transition: 0.3s ease-in-out;
 	}
 
 	.hide-item {

@@ -10,6 +10,8 @@ import { VscTools } from "react-icons/vsc";
 import { FiBox } from "react-icons/fi";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import Pdf from "../../documents/resume.pdf";
+import { scroller } from "react-scroll";
+import $ from "jquery";
 
 let width =
 	window.innerWidth ||
@@ -18,7 +20,7 @@ let width =
 
 const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 
-function Navbar({ scrollPos }) {
+function Navbar({ scrollPos, skillsSection }) {
 	useEffect(() => {
 		AOS.init();
 	}, []);
@@ -82,7 +84,7 @@ function Navbar({ scrollPos }) {
 		}
 	}
 
-	const handleDropDown = async (e) => {
+	const handleDropDown = async () => {
 		const dropDownMenu = document.querySelector(".drop-down-menu");
 
 		dropDownMenu.classList.toggle("hidden");
@@ -102,6 +104,22 @@ function Navbar({ scrollPos }) {
 		document.querySelector(".credit").classList.toggle("hidden");
 	};
 
+	const scrollToClassPosition = (classname) => {
+		const dropDownMenu = document.querySelector(".drop-down-menu");
+		handleDropDown();
+		dropDownMenu.classList.add("hidden");
+
+		dropDownMenu.classList.contains("hidden")
+			? (document.body.style.overflow = "auto")
+			: (document.body.style.overflow = "hidden");
+
+		scroller.scrollTo(classname, {
+			duration: 800,
+			delay: 0,
+			smooth: "easeInOutQuart",
+		});
+	};
+
 	return (
 		<>
 			<nav className="navbar">
@@ -114,19 +132,32 @@ function Navbar({ scrollPos }) {
 					/>
 				</div>
 				<ul id="nav-items" data-aos="fade-left" duration="4000">
-					<li id="about">
-						<a href="#">Skills</a>
-					</li>
-					<li id="media">
+					<li>
 						<a
-							target="blank"
-							href="https://www.linkedin.com/in/anthonyvidovic/"
+							onClick={() =>
+								scrollToClassPosition("skills-header")
+							}
+						>
+							Skills
+						</a>
+					</li>
+					<li>
+						<a
+							onClick={() =>
+								scrollToClassPosition("projects-header")
+							}
 						>
 							Projects
 						</a>
 					</li>
-					<li id="contact">
-						<a href="#">Contact</a>
+					<li>
+						<a
+							onClick={() =>
+								scrollToClassPosition("contact-header")
+							}
+						>
+							Contact
+						</a>
 					</li>
 					<button id="resume" onClick={() => window.open(Pdf)}>
 						Resume <GoLinkExternal />
@@ -149,15 +180,33 @@ function Navbar({ scrollPos }) {
 				<div className="options">
 					<div className="hidden">
 						<VscTools size={35} />
-						<a href="#">Skills</a>
+						<a
+							onClick={() =>
+								scrollToClassPosition("skills-header")
+							}
+						>
+							Skills
+						</a>
 					</div>
 					<div className="hidden">
 						<FiBox size={35} />
-						<a href="#">Projects</a>
+						<a
+							onClick={() =>
+								scrollToClassPosition("projects-header")
+							}
+						>
+							Projects
+						</a>
 					</div>
 					<div className="hidden">
 						<GrContactInfo size={35} />
-						<a href="#">Contact</a>
+						<a
+							onClick={() =>
+								scrollToClassPosition("contact-header")
+							}
+						>
+							Contact
+						</a>
 					</div>
 					<div className="hidden">
 						<IoMdOpen size={35} />
