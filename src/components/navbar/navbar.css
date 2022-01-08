@@ -17,14 +17,9 @@
   }
 }
 
-.hidden {
-  display: none;
-  visibility: hidden;
-  opacity: 0%;
-}
-
 .navbar {
-  background-color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(rgba(255, 255, 255, 0.9)), color-stop(rgba(255, 255, 255, 0.8)), color-stop(rgba(255, 255, 255, 0.7)), color-stop(rgba(255, 255, 255, 0.6)), color-stop(rgba(255, 255, 255, 0.5)), color-stop(rgba(255, 255, 255, 0.4)), color-stop(rgba(255, 255, 255, 0.3)), color-stop(rgba(255, 255, 255, 0.2)), color-stop(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   color: black;
   font-family: "Open Sans", sans-serif;
   width: 100%;

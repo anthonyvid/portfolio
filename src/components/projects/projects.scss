@@ -1,13 +1,15 @@
 @import "../styles/helper.scss";
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300&family=Lora:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Lora:wght@400;500;600;700&display=swap");
 
 .projects-section {
 	width: 100%;
-	height: 500px;
+	height: auto;
 	margin-top: 150px;
 	display: flex;
 	flex-direction: column;
 	gap: 50px;
-	border: 1px solid red;
+	padding-top: 150px;
 }
 
 .projects-header {
@@ -27,5 +29,130 @@
 	small {
 		font-size: 16px;
 		color: grey;
+	}
+}
+
+.projects-content {
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 100px;
+
+	.project {
+		width: 80%;
+		height: 350px;
+		display: flex;
+		flex-direction: row;
+
+		.content {
+			width: 45%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			padding: 40px 50px 20px 50px;
+			justify-content: start;
+			align-items: flex-start;
+
+			h2 {
+				font-weight: 700;
+				font-family: $primary-font;
+				margin-bottom: 13px;
+			}
+
+			p {
+				font-family: "Be Vietnam Pro", sans-serif;
+			}
+
+			.stack {
+				gap: 10px 25px;
+				color: white;
+				font-size: 14px;
+				margin-top: 25px;
+				display: flex;
+				flex-wrap: wrap;
+
+				div {
+					padding: 5px;
+					border-radius: 1px;
+					font-family: "Inter", sans-serif;
+				}
+			}
+
+			.links {
+				display: flex;
+				gap: 20px;
+				margin-top: auto;
+
+				.icon {
+					cursor: pointer;
+					transition: 0.3s ease-in-out;
+					&:hover {
+						transform: scale(1.1);
+						transition: 0.3s ease-in-out;
+					}
+				}
+			}
+		}
+
+		.img-wrap {
+			width: 55%;
+			height: 100%;
+
+			.slider {
+				width: 100%;
+				height: 100%;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+
+			.content {
+				align-items: flex-end;
+
+				p {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	.project {
+		flex-direction: column !important;
+		height: auto !important;
+
+		.content {
+			width: 100% !important;
+			height: auto !important;
+			padding: 0px 0 20px 0 !important;
+
+			p {
+				font-size: 13px !important;
+			}
+
+			.stack {
+				font-size: 11px !important;
+				gap: 5px 10px !important;
+				margin-top: 10px !important;
+			}
+
+			.links {
+				margin-top: 10px !important;
+			}
+		}
+
+		.img-wrap {
+			width: 100% !important;
+			height: 55% !important;
+		}
 	}
 }

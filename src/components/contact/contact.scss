@@ -4,7 +4,7 @@
 	width: 100%;
 	height: auto;
 	margin-top: 150px;
-	padding-bottom: 100px;
+	padding-bottom: 150px;
 	display: flex;
 	flex-direction: column;
 }
@@ -56,6 +56,7 @@
 
 			&:hover {
 				transform: scale(1.1);
+                cursor: pointer;
 			}
 		}
 	}

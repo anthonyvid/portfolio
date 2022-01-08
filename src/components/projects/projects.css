@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300&family=Lora:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Lora:wght@400;500;600;700&display=swap");
 .projects-section {
   width: 100%;
-  height: 500px;
+  height: auto;
   margin-top: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,7 +14,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 50px;
-  border: 1px solid red;
+  padding-top: 150px;
 }
 
 .projects-header {
@@ -42,5 +44,163 @@
 .projects-header small {
   font-size: 16px;
   color: grey;
+}
+
+.projects-content {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 100px;
+}
+
+.projects-content .project {
+  width: 80%;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projects-content .project .content {
+  width: 45%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px 50px 20px 50px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.projects-content .project .content h2 {
+  font-weight: 700;
+  font-family: "Lora", serif;
+  margin-bottom: 13px;
+}
+
+.projects-content .project .content p {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.projects-content .project .content .stack {
+  gap: 10px 25px;
+  color: white;
+  font-size: 14px;
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects-content .project .content .stack div {
+  padding: 5px;
+  border-radius: 1px;
+  font-family: "Inter", sans-serif;
+}
+
+.projects-content .project .content .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.projects-content .project .content .links .icon {
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.projects-content .project .content .links .icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.projects-content .project .img-wrap {
+  width: 55%;
+  height: 100%;
+}
+
+.projects-content .project .img-wrap .slider {
+  width: 100%;
+  height: 100%;
+}
+
+.projects-content .project .img-wrap .slider img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects-content .project:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.projects-content .project:nth-child(even) .content {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.projects-content .project:nth-child(even) .content p {
+  text-align: right;
+}
+
+@media only screen and (max-width: 1150px) {
+  .project {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: auto !important;
+  }
+  .project .content {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0px 0 20px 0 !important;
+  }
+  .project .content p {
+    font-size: 13px !important;
+  }
+  .project .content .stack {
+    font-size: 11px !important;
+    gap: 5px 10px !important;
+    margin-top: 10px !important;
+  }
+  .project .content .links {
+    margin-top: 10px !important;
+  }
+  .project .img-wrap {
+    width: 100% !important;
+    height: 55% !important;
+  }
 }
 /*# sourceMappingURL=projects.css.map */

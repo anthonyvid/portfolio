@@ -20,31 +20,13 @@ let width =
 
 const timer = (ms) => new Promise((res) => setTimeout(res, ms));
 
-function Navbar({ scrollPos, skillsSection }) {
+function Navbar({ scrollPos, reachedTop }) {
 	useEffect(() => {
 		AOS.init();
 	}, []);
 
 	const [navEffect, setNavEffect] = useState(false);
 	const [mobileNavEffect, setMobileNavEffect] = useState(false);
-
-	const handleNavEffect = async () => {
-		const items = document.getElementById("nav-items").childNodes;
-
-		if (!items[0].hasAttribute("data-aos")) {
-			items[0].setAttribute("data-aos", "fade");
-			await timer(50);
-			items[1].setAttribute("data-aos", "fade");
-			await timer(50);
-			items[2].setAttribute("data-aos", "fade");
-		} else {
-			items[2].removeAttribute("data-aos");
-			await timer(50);
-			items[1].removeAttribute("data-aos");
-			await timer(50);
-			items[0].removeAttribute("data-aos");
-		}
-	};
 
 	const handleMobileNavEffect = () => {
 		const dropDownMenu =
@@ -59,30 +41,6 @@ function Navbar({ scrollPos, skillsSection }) {
 			logo.removeAttribute("data-aos");
 		}
 	};
-
-	if (scrollPos > 15) {
-		if (!navEffect) {
-			handleNavEffect();
-			setNavEffect(true);
-		}
-	} else {
-		if (navEffect) {
-			handleNavEffect();
-			setNavEffect(false);
-		}
-	}
-
-	if (scrollPos > 100 && width < 725) {
-		if (!mobileNavEffect) {
-			handleMobileNavEffect();
-			setMobileNavEffect(true);
-		}
-	} else {
-		if (mobileNavEffect) {
-			handleMobileNavEffect();
-			setMobileNavEffect(false);
-		}
-	}
 
 	const handleDropDown = async () => {
 		const dropDownMenu = document.querySelector(".drop-down-menu");
@@ -135,7 +93,7 @@ function Navbar({ scrollPos, skillsSection }) {
 					<li>
 						<a
 							onClick={() =>
-								scrollToClassPosition("skills-header")
+								scrollToClassPosition("skills-section")
 							}
 						>
 							Skills
@@ -144,7 +102,7 @@ function Navbar({ scrollPos, skillsSection }) {
 					<li>
 						<a
 							onClick={() =>
-								scrollToClassPosition("projects-header")
+								scrollToClassPosition("projects-section")
 							}
 						>
 							Projects
@@ -182,7 +140,7 @@ function Navbar({ scrollPos, skillsSection }) {
 						<VscTools size={35} />
 						<a
 							onClick={() =>
-								scrollToClassPosition("skills-header")
+								scrollToClassPosition("skills-section")
 							}
 						>
 							Skills
@@ -192,7 +150,7 @@ function Navbar({ scrollPos, skillsSection }) {
 						<FiBox size={35} />
 						<a
 							onClick={() =>
-								scrollToClassPosition("projects-header")
+								scrollToClassPosition("projects-section")
 							}
 						>
 							Projects
@@ -202,7 +160,7 @@ function Navbar({ scrollPos, skillsSection }) {
 						<GrContactInfo size={35} />
 						<a
 							onClick={() =>
-								scrollToClassPosition("contact-header")
+								scrollToClassPosition("contact-section")
 							}
 						>
 							Contact
@@ -210,12 +168,7 @@ function Navbar({ scrollPos, skillsSection }) {
 					</div>
 					<div className="hidden">
 						<IoMdOpen size={35} />
-						<a
-							href={Pdf}
-							target="_blank"
-							without
-							rel="noopener noreferrer"
-						>
+						<a href={Pdf} target="_blank" rel="noopener noreferrer">
 							Resume
 						</a>
 					</div>

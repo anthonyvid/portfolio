@@ -12,6 +12,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 50px;
+  padding-top: 150px;
 }
 
 .skills-header {

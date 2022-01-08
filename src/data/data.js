@@ -19,8 +19,56 @@ export const skills = [
 export const projects = [
 	{
 		id: 1,
-		title: "test project",
-		description: "this is a test description that i wrote.",
-		tools: ["html", "css", "js"],
+		title: "TicketScout",
+		description:
+			"A Node.js web application powered by express to track and manage tickets, payments, and customers. Made for computer and phone technicians.",
+		stack: [
+			["HTML", "A882DD"],
+			["SCSS", "F08080"],
+			["JavaScript", "93827F"],
+			["NodeJs", "B4D2E7"],
+			["Express", "7D8CC4"],
+			["MongoDB", "C3BEF7"],
+			["Pusher Web Sockets", "FFC145"],
+			["Google API", "6D9DC5"],
+			["Twilio SMS API", "242038"],
+			["GoShippo Tracking API", "A6D3A0"],
+		],
+		img: [
+			"./photos/ticketscout/1.jpeg",
+			"./photos/ticketscout/2.png",
+			"./photos/ticketscout/3.jpeg",
+			"./photos/ticketscout/4.png",
+			"./photos/ticketscout/5.jpeg",
+		],
+		links: [
+			"https://github.com/anthonyvid/TicketScout",
+			"https://ticketscout.herokuapp.com/",
+		],
+	},
+	{
+		id: 2,
+		title: "TicketScout",
+		description:
+			"A Node.js web application powered by express to track and manage tickets, payments, and customers. Made for computer and phone technicians.",
+		stack: [
+			["HTML", "A882DD"],
+			["SCSS", "F08080"],
+			["JavaScript", "93827F"],
+			["NodeJs", "B4D2E7"],
+			["Express", "7D8CC4"],
+			["MongoDB", "C3BEF7"],
+		],
+		img: [
+			"./photos/ticketscout/1.jpeg",
+			"./photos/ticketscout/2.png",
+			"./photos/ticketscout/3.jpeg",
+			"./photos/ticketscout/4.png",
+			"./photos/ticketscout/5.jpeg",
+		],
+		links: [
+			"https://github.com/anthonyvid/TicketScout",
+			"https://ticketscout.herokuapp.com/",
+		],
 	},
 ];

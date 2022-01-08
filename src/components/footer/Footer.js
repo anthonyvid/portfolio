@@ -23,13 +23,11 @@ const Footer = ({ reachedBottom }) => {
 					<small>2022</small>
 				</div>
 			</div>
-			{reachedBottom && (
-				<div className="back-to-top" onClick={scrollToTop}>
-					{" "}
-					<BsArrowUpShort />
-					<small>TO TOP</small>
-				</div>
-			)}
+			<div className="back-to-top" onClick={scrollToTop}>
+				{" "}
+				<BsArrowUpShort />
+				<small>TO TOP</small>
+			</div>
 		</div>
 	);
 };

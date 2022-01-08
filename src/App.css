@@ -14,6 +14,10 @@ a {
 	color: black;
 }
 
+a:hover {
+	cursor: pointer;
+}
+
 .page-container {
 	display: flex;
 	flex-direction: column;
@@ -58,4 +62,10 @@ a {
 		visibility: none;
 		display: none;
 	}
+}
+
+.skills-scroll-pos {
+	width: 100%;
+	height: 150px;
+	background-color: red;
 }
