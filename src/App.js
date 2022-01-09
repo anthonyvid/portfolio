@@ -15,14 +15,14 @@ function App() {
 	const [reachedBottom, setReachedBottom] = useState(false);
 	const [reachedTop, setReachedTop] = useState(false);
 
-	window.onbeforeunload = function () {
-		window.scroll({
+	window.onload = function () {
+		window.scrollTo({
 			top: 0,
 			left: 0,
 			behavior: "smooth",
 		});
 	};
-
+    
 	const handleScroll = (e) => {
 		const position = window.scrollY;
 		setScrollPos(position);
@@ -72,7 +72,6 @@ function App() {
 			/> */}
 			<Navbar scrollPos={scrollPos} reachedTop={reachedTop} />
 			<About scrollPos={scrollPos} />
-            {/* <div className="skills-scroll-pos"></div> */}
 			<Skills />
 			<Projects />
 			<Contact />

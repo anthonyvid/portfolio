@@ -11,7 +11,6 @@ import { FiBox } from "react-icons/fi";
 import { AiOutlineCopyrightCircle } from "react-icons/ai";
 import Pdf from "../../documents/resume.pdf";
 import { scroller } from "react-scroll";
-import $ from "jquery";
 
 let width =
 	window.innerWidth ||
@@ -24,23 +23,6 @@ function Navbar({ scrollPos, reachedTop }) {
 	useEffect(() => {
 		AOS.init();
 	}, []);
-
-	const [navEffect, setNavEffect] = useState(false);
-	const [mobileNavEffect, setMobileNavEffect] = useState(false);
-
-	const handleMobileNavEffect = () => {
-		const dropDownMenu =
-			document.querySelector(".drop-down-icon").firstElementChild;
-		const logo = document.querySelector(".logo");
-
-		if (!dropDownMenu.hasAttribute("data-aos")) {
-			dropDownMenu.setAttribute("data-aos", "fade");
-			logo.setAttribute("data-aos", "fade");
-		} else {
-			dropDownMenu.removeAttribute("data-aos");
-			logo.removeAttribute("data-aos");
-		}
-	};
 
 	const handleDropDown = async () => {
 		const dropDownMenu = document.querySelector(".drop-down-menu");
@@ -87,9 +69,15 @@ function Navbar({ scrollPos, reachedTop }) {
 						alt="logo"
 						data-aos="fade-right"
 						duration="4000"
+						data-aos-once="true"
 					/>
 				</div>
-				<ul id="nav-items" data-aos="fade-left" duration="4000">
+				<ul
+					id="nav-items"
+					data-aos="fade-left"
+					duration="4000"
+					data-aos-once="true"
+				>
 					<li>
 						<a
 							onClick={() =>

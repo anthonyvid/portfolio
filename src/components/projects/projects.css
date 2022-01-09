@@ -84,7 +84,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 40px 50px 20px 50px;
+  padding: 40px 50px 40px 50px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -113,6 +113,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .projects-content .project .content .stack div {
@@ -133,6 +134,7 @@
   cursor: pointer;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+  color: #383838;
 }
 
 .projects-content .project .content .links .icon:hover {
@@ -147,14 +149,17 @@
   height: 100%;
 }
 
-.projects-content .project .img-wrap .slider {
+.projects-content .project .img-wrap .carousel {
   width: 100%;
   height: 100%;
 }
 
-.projects-content .project .img-wrap .slider img {
-  width: 100%;
+.projects-content .project .img-wrap .carousel .image {
+  margin: 0 auto;
   height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .projects-content .project:nth-child(even) {

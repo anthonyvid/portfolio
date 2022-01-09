@@ -3,8 +3,8 @@
 .contact-section {
 	width: 100%;
 	height: auto;
-	margin-top: 150px;
-	padding-bottom: 150px;
+	margin-top: 400px;
+	padding-bottom: 200px;
 	display: flex;
 	flex-direction: column;
 }
@@ -56,7 +56,7 @@
 
 			&:hover {
 				transform: scale(1.1);
-                cursor: pointer;
+				cursor: pointer;
 			}
 		}
 	}

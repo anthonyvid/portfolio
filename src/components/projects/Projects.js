@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./projects.css";
-import { projects, colors } from "../../data/data";
-import { IoOpen } from "react-icons/io5";
-import { AiFillGithub } from "react-icons/ai";
+import { projects } from "../../data/data";
+import { MdOutlineOpenInNew } from "react-icons/md";
+import { VscGithub } from "react-icons/vsc";
 import "aos/dist/aos.css";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import SimpleImageSlider from "react-simple-image-slider";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 function Projects() {
+	const [imgBoxSize, setImgBoxSize] = useState({ width: 0, height: 0 });
+	const ref = useRef(null);
+
+	console.log(imgBoxSize.width, imgBoxSize.height);
+
 	return (
 		<section className="projects-section">
 			<div className="projects-header">
@@ -38,14 +45,14 @@ function Projects() {
 									})}
 								</div>
 								<div className="links">
-									<AiFillGithub
+									<VscGithub
 										className="icon"
-										size={30}
+										size={29}
 										onClick={() =>
 											window.open(links[0], "_blank")
 										}
 									/>
-									<IoOpen
+									<MdOutlineOpenInNew
 										className="icon"
 										size={30}
 										onClick={() =>
@@ -54,19 +61,21 @@ function Projects() {
 									/>
 								</div>
 							</div>
-							<div className="img-wrap">
+							<div className="img-wrap" ref={ref}>
 								<Carousel
-									className="silder"
-									showThumbs={false}
-									showArrows={true}
-									dynamicHeight={true}
-									emulateTouch={true}
-									swipeable={true}
-									infiniteLoop={true}
-									showIndicators={false}
+									infiniteLoop
+									autoPlay
+									className="carousel"
 								>
-									{img.map((i) => {
-										return <img src={i} />;
+									{img.map((img, index) => {
+										return (
+											<div className="image" key={index}>
+												<img
+													src={img.url}
+													alt="project photo"
+												/>
+											</div>
+										);
 									})}
 								</Carousel>
 							</div>

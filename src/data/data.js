@@ -35,11 +35,11 @@ export const projects = [
 			["GoShippo Tracking API", "A6D3A0"],
 		],
 		img: [
-			"./photos/ticketscout/1.jpeg",
-			"./photos/ticketscout/2.png",
-			"./photos/ticketscout/3.jpeg",
-			"./photos/ticketscout/4.png",
-			"./photos/ticketscout/5.jpeg",
+			{ url: "photos/ticketscout/1.jpeg" },
+			{ url: "photos/ticketscout/2.png" },
+			{ url: "photos/ticketscout/3.jpeg" },
+			{ url: "photos/ticketscout/4.png" },
+			{ url: "photos/ticketscout/5.jpeg" },
 		],
 		links: [
 			"https://github.com/anthonyvid/TicketScout",
@@ -57,10 +57,10 @@ export const projects = [
 			["Matplot", "93827F"],
 		],
 		img: [
-			"./photos/coviddatatracker/1.png",
-			"./photos/coviddatatracker/2.png",
-			"./photos/coviddatatracker/3.png",
-			"./photos/coviddatatracker/4.png",
+			{ url: "photos/coviddatatracker/1.png" },
+			{ url: "photos/coviddatatracker/2.png" },
+			{ url: "photos/coviddatatracker/3.png" },
+			{ url: "photos/coviddatatracker/4.png" },
 		],
 		links: [
 			"https://github.com/anthonyvid/CovidDataTracker",
